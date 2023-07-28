@@ -8,3 +8,9 @@ inputs.forEach(item=>{
     console.log("item",item);
     
 })
+
+const circ=(diameter:number)=>{
+    return diameter * Math.PI
+}
+
+console.log(circ(1))
