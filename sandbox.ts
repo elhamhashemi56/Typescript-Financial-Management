@@ -14,3 +14,29 @@ const circ=(diameter:number)=>{
 }
 
 console.log(circ(1))
+
+//Array
+
+let names=["hanna","ali","sina"]
+
+//names=20
+// names[1]=23
+// names.push(35)
+
+names[0]="anna"
+names.push("sara")
+
+//objekts
+
+let person={
+    name:"Ali",
+    age:21,
+    isMale:true
+}
+
+
+// person.name=33
+// person.nam="shiva"
+
+person.name="sara"
+console.log(person);
