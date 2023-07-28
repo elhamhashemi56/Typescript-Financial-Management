@@ -26,3 +26,24 @@ var person = {
 // person.nam="shiva"
 person.name = "sara";
 console.log(person);
+//explicit types
+var fName;
+fName = "ali";
+var age;
+age = 20;
+var temp;
+temp = 13;
+//temp=true
+var array1 = [];
+array1.push(12);
+//array1[0]="WW"
+array1[0] = 13;
+var arrayMix = [];
+arrayMix[0] = "ali";
+arrayMix[1] = false;
+var personOne;
+personOne = {
+    name: "ali",
+    age: 11
+};
+var personTwo;

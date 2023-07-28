@@ -40,3 +40,37 @@ let person={
 
 person.name="sara"
 console.log(person);
+
+
+//explicit types
+
+let fName:string
+fName="ali"
+
+let age:number
+age=20
+
+let temp:string | number
+temp=13
+//temp=true
+
+let array1:number[]=[]
+array1.push(12)
+//array1[0]="WW"
+array1[0]=13
+
+let arrayMix:(number|string|boolean)[]=[]
+arrayMix[0]="ali"
+arrayMix[1]=false
+
+let personOne:object
+personOne={
+    name:"ali",
+    age:11
+}
+
+let personTwo:{
+    name:string,
+    age:number,
+    isMale:boolean
+}
