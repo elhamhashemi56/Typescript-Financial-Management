@@ -47,3 +47,11 @@ personOne = {
     age: 11
 };
 var personTwo;
+//type of any
+var name1;
+var age1;
+name1 = 25;
+age1 = "ali";
+var mixed = [];
+mixed.push("ali");
+mixed.push(3);
