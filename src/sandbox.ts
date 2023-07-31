@@ -86,3 +86,6 @@ age1="ali"
 let mixed:any[]=[]
 mixed.push("ali")
 mixed.push(3)
+
+console.log(mixed);
+

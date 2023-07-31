@@ -1,23 +1,24 @@
-var chara = "elham";
+"use strict";
+const chara = "elham";
 console.log("name", chara);
-var inputs = document.querySelectorAll("input");
+const inputs = document.querySelectorAll("input");
 console.log("inputs", inputs);
-inputs.forEach(function (item) {
+inputs.forEach(item => {
     console.log("item", item);
 });
-var circ = function (diameter) {
+const circ = (diameter) => {
     return diameter * Math.PI;
 };
 console.log(circ(1));
 //Array
-var names = ["hanna", "ali", "sina"];
+let names = ["hanna", "ali", "sina"];
 //names=20
 // names[1]=23
 // names.push(35)
 names[0] = "anna";
 names.push("sara");
 //objekts
-var person = {
+let person = {
     name: "Ali",
     age: 21,
     isMale: true
@@ -27,31 +28,32 @@ var person = {
 person.name = "sara";
 console.log(person);
 //explicit types
-var fName;
+let fName;
 fName = "ali";
-var age;
+let age;
 age = 20;
-var temp;
+let temp;
 temp = 13;
 //temp=true
-var array1 = [];
+let array1 = [];
 array1.push(12);
 //array1[0]="WW"
 array1[0] = 13;
-var arrayMix = [];
+let arrayMix = [];
 arrayMix[0] = "ali";
 arrayMix[1] = false;
-var personOne;
+let personOne;
 personOne = {
     name: "ali",
     age: 11
 };
-var personTwo;
+let personTwo;
 //type of any
-var name1;
-var age1;
+let name1;
+let age1;
 name1 = 25;
 age1 = "ali";
-var mixed = [];
+let mixed = [];
 mixed.push("ali");
 mixed.push(3);
+console.log(mixed);
