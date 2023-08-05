@@ -107,4 +107,47 @@ console.log(add(12,5));
 // c=0 : das heißt, 3the Argument kann sein aber nicht muss 
 add(3,4,6)
 
+// Type Aliases
+
+type s= string
+type n= number
+type sn= string | number
+type snb= string | number | boolean
+type arrayType=(sn)
+type objectType={
+    name:string,
+    age:number
+}
+
+
+let fName3:s
+fName3="ali"
+console.log(fName3);
+
+let array2:(sn)[]=[]
+let array3:arrayType[]=[]
+array2[1]=45
+array3.push("salam")
+console.log(array3);
+
+let user:objectType
+user={name:"ali",age:23}
+user.name="hasan"
+
+
+let sayHello=(fName:s , age:n)=>{
+    console.log(`Hallo ${fName}. du bist ${age} years old.`);
+    
+}
+sayHello("Lili",22)
+
+
+let greet2=(user:objectType)=>{
+    console.log(`hello ${user.name}`);
+    
+}
+
+greet2({name:"sara",age:30})
+
+
 

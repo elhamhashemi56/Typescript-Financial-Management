@@ -69,3 +69,22 @@ let add = (a, b, c = 0) => {
 console.log(add(12, 5));
 // c=0 : das heißt, 3the Argument kann sein aber nicht muss 
 add(3, 4, 6);
+let fName3;
+fName3 = "ali";
+console.log(fName3);
+let array2 = [];
+let array3 = [];
+array2[1] = 45;
+array3.push("salam");
+console.log(array3);
+let user;
+user = { name: "ali", age: 23 };
+user.name = "hasan";
+let sayHello = (fName, age) => {
+    console.log(`Hallo ${fName}. du bist ${age} years old.`);
+};
+sayHello("Lili", 22);
+let greet2 = (user) => {
+    console.log(`hello ${user.name}`);
+};
+greet2({ name: "sara", age: 30 });
