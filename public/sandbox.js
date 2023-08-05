@@ -57,3 +57,15 @@ let mixed = [];
 mixed.push("ali");
 mixed.push(3);
 console.log(mixed);
+// Functions Basic
+let greet;
+greet = (fName) => {
+    console.log("hello", fName);
+};
+greet("elham");
+let add = (a, b, c = 0) => {
+    return a + b;
+};
+console.log(add(12, 5));
+// c=0 : das heißt, 3the Argument kann sein aber nicht muss 
+add(3, 4, 6);

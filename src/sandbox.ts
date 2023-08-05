@@ -89,3 +89,22 @@ mixed.push(3)
 
 console.log(mixed);
 
+// Functions Basic
+
+let greet:Function 
+greet=(fName:string)=>{
+    console.log("hello",fName);
+    
+}
+
+greet("elham")
+
+let add=(a:number,b:number, c=0):number=>{
+    return a+b
+}
+
+console.log(add(12,5));
+// c=0 : das heißt, 3the Argument kann sein aber nicht muss 
+add(3,4,6)
+
+
