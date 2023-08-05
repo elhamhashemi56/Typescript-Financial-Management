@@ -41,7 +41,7 @@ let person={
 person.name="sara"
 console.log(person);
 
-
+//##############################################################
 //explicit types
 
 let fName:string
@@ -75,6 +75,8 @@ let personTwo:{
     isMale:boolean
 }
 
+
+//##############################################################
 //type of any
 
 let name1:any
@@ -89,6 +91,8 @@ mixed.push(3)
 
 console.log(mixed);
 
+
+//##############################################################
 // Functions Basic
 
 let greet:Function 
@@ -107,6 +111,8 @@ console.log(add(12,5));
 // c=0 : das heißt, 3the Argument kann sein aber nicht muss 
 add(3,4,6)
 
+
+//##############################################################
 // Type Aliases
 
 type s= string
@@ -150,4 +156,35 @@ let greet2=(user:objectType)=>{
 greet2({name:"sara",age:30})
 
 
+//##############################################################
+//Function Signatures
 
+let greet3:(a:string,b:number) => void
+greet3=(name:s,age:n)=>{
+    console.log("my name ist",name, "und my age ist:", age);
+    
+}
+greet3("Elham",46)
+
+
+let calc:(a:number, b:number, c:string) => number
+calc=(num1:n, num2:n, action:s)=>{
+    if(action === "add"){
+        return num1 + num2
+    }else{
+        return num1-num2
+    }
+}
+console.log(calc(6, 3, "add"));
+
+
+type objectType2={name:s , age:n}
+//let person2:(obj:{name:s,age:n})=> void
+let person2:(obj:objectType2)=> void
+person2=(obj:objectType2)=>{
+    console.log("my name is:",obj.name);
+    
+}
+
+person2({name:"sasan",age:11})
+//##############################################################

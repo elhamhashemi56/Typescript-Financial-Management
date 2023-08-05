@@ -27,6 +27,7 @@ let person = {
 // person.nam="shiva"
 person.name = "sara";
 console.log(person);
+//##############################################################
 //explicit types
 let fName;
 fName = "ali";
@@ -48,6 +49,7 @@ personOne = {
     age: 11
 };
 let personTwo;
+//##############################################################
 //type of any
 let name1;
 let age1;
@@ -57,6 +59,7 @@ let mixed = [];
 mixed.push("ali");
 mixed.push(3);
 console.log(mixed);
+//##############################################################
 // Functions Basic
 let greet;
 greet = (fName) => {
@@ -88,3 +91,27 @@ let greet2 = (user) => {
     console.log(`hello ${user.name}`);
 };
 greet2({ name: "sara", age: 30 });
+//##############################################################
+//Function Signatures
+let greet3;
+greet3 = (name, age) => {
+    console.log("my name ist", name, "und my age ist:", age);
+};
+greet3("Elham", 46);
+let calc;
+calc = (num1, num2, action) => {
+    if (action === "add") {
+        return num1 + num2;
+    }
+    else {
+        return num1 - num2;
+    }
+};
+console.log(calc(6, 3, "add"));
+//let person2:(obj:{name:s,age:n})=> void
+let person2;
+person2 = (obj) => {
+    console.log("my name is:", obj.name);
+};
+person2({ name: "sasan", age: 11 });
+//##############################################################
