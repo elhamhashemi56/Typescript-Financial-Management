@@ -26,3 +26,41 @@ form.addEventListener("submit",(e:Event)=>{
     console.log(amount.valueAsNumber);
     
 })
+//############################################
+//Classes
+
+class Invoice {
+    client: string;
+    details: string;
+    amount: number;
+    
+    constructor (c:string , d:string , a:number){
+        this.client=c;
+        this.details=d;
+        this.amount=a;
+    }
+
+    format(){
+        return `${this.client} owes ${this.amount} for ${this.details} `
+    }
+
+   
+}
+
+let invOne=new Invoice("ali","work to web site",290)
+let invTwo=new Invoice("sina","cover",300)
+
+console.log(invOne);
+console.log(invTwo);
+console.log(invOne.format());
+console.log(invTwo.format());
+
+let invoices: Invoice []=[]
+invoices.push(invOne)
+invoices.push(invTwo)
+
+console.log(invoices);
+
+invOne.client="sahar"
+
+

@@ -19,3 +19,26 @@ form.addEventListener("submit", (e) => {
     console.log(details.value);
     console.log(amount.valueAsNumber);
 });
+//############################################
+//Classes
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes ${this.amount} for ${this.details} `;
+    }
+}
+let invOne = new Invoice("ali", "work to web site", 290);
+let invTwo = new Invoice("sina", "cover", 300);
+console.log(invOne);
+console.log(invTwo);
+console.log(invOne.format());
+console.log(invTwo.format());
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+console.log(invoices);
+invOne.client = "sahar";
