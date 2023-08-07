@@ -28,17 +28,25 @@ form.addEventListener("submit",(e:Event)=>{
 })
 //############################################
 //Classes
+//public - private - readonly
 
 class Invoice {
-    client: string;
-    details: string;
-    amount: number;
+    // client: string;
+    // details: string;
+    // amount: number;
     
-    constructor (c:string , d:string , a:number){
-        this.client=c;
-        this.details=d;
-        this.amount=a;
-    }
+    // constructor (c:string , d:string , a:number){
+    //     this.client=c;
+    //     this.details=d;
+    //     this.amount=a;
+    // }
+
+    //das ist eine alternative für class create.wir können properties einfach im constractor definieren aber mussen wit acess type auch gleichzeitig definieren.
+    constructor(
+        public client:string,
+        private details:string,
+        readonly amount:number
+    ){}
 
     format(){
         return `${this.client} owes ${this.amount} for ${this.details} `
@@ -62,5 +70,7 @@ invoices.push(invTwo)
 console.log(invoices);
 
 invOne.client="sahar"
+// invOne.details="ssss" //das geht nicht da, details hast acess type auf privat
+// invOne.amount=444     //das geht nicht da, amount hast acess type auf readonly
 
 
