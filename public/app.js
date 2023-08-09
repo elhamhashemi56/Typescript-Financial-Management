@@ -1,4 +1,5 @@
 import { Invoice } from "./classes/Invoice.js";
+import { Payment } from "./classes/Payment.js";
 // The DOM $ Type Casting
 // DOM = Document Object Models
 const anchor = document.querySelector("a");
@@ -68,3 +69,13 @@ const greeting = (person) => {
     console.log("hallo", person.name);
 };
 greeting(me);
+//#######################################################
+//Classes with Interfaces
+let docOne;
+let docTwo;
+docOne = new Invoice("ali", "work to web site", 290);
+docTwo = new Payment("sina", "cover", 300);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);

@@ -1,4 +1,6 @@
 import { Invoice } from "./classes/Invoice.js";
+import { Payment } from "./classes/Payment.js";
+import { Hasformatter } from "./interfaces/Hasformatter";
 // The DOM $ Type Casting
 // DOM = Document Object Models
 
@@ -118,5 +120,20 @@ const greeting=(person:isPerson)=>{
 }
 
 greeting(me)
- 
+
+//#######################################################
+//Classes with Interfaces
+
+let docOne:Hasformatter
+let docTwo:Hasformatter
+
+docOne=new Invoice("ali","work to web site",290)
+docTwo=new Payment("sina","cover",300)
+
+let docs:Hasformatter[]=[]
+docs.push(docOne)
+docs.push(docTwo)
+console.log(docs);
+
+
 
