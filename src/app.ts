@@ -83,3 +83,40 @@ invOne.client="sahar"
 //                   "target": "es6",  
 //2: im HTML datei sollen wir type="module" hinzufügen
 //   <script type="module" src='./sandbox.js'></script>
+
+//#####################################################
+//Interfaces
+// Klassen (Classes) sind für Struktur und Verhalten. Sie können Eigenschaften und Methoden haben und können Instanzen erstellen.
+// Schnittstellen (Interfaces) sind nur für Struktur. Sie definieren, wie Daten aussehen sollten, aber haben keine Implementierung von Methoden oder Eigenschaften.
+
+interface isPerson{
+    name:string;
+    age:number;
+    speak(a:string):void;
+    spend(a:number) : number
+}
+
+let me : isPerson ={
+    name:"ali",
+    age:22,
+    speak(text:string){
+        console.log(text);
+        
+    },
+    spend(amount:number){
+        console.log("I spend",amount);
+        return amount
+        
+    }
+}
+
+console.log(me);
+
+const greeting=(person:isPerson)=>{
+    console.log("hallo",person.name);
+    
+}
+
+greeting(me)
+ 
+

@@ -52,13 +52,19 @@ invoices.push(invOne);
 invoices.push(invTwo);
 console.log(invoices);
 invOne.client = "sahar";
-// invOne.details="ssss" //das geht nicht da, details hast acess type auf privat
-// invOne.amount=444     //das geht nicht da, amount hast acess type auf readonly
-//####################################################
-//Modules
-//Ein Modulsystem in TypeScript hilft uns, unseren Code besser zu organisieren, so wie man Dinge in verschiedene Schubladen legt.
-// Für Modules zu verwenden, sollen wir :
-//1: in tsconfig =>  "module": "es2015", 
-//                   "target": "es6",  
-//2: im HTML datei sollen wir type="module" hinzufügen
-//   <script type="module" src='./sandbox.js'></script>
+let me = {
+    name: "ali",
+    age: 22,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log("I spend", amount);
+        return amount;
+    }
+};
+console.log(me);
+const greeting = (person) => {
+    console.log("hallo", person.name);
+};
+greeting(me);
