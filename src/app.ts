@@ -1,139 +1,34 @@
 import { Invoice } from "./classes/Invoice.js";
 import { Payment } from "./classes/Payment.js";
 import { Hasformatter } from "./interfaces/Hasformatter";
-// The DOM $ Type Casting
-// DOM = Document Object Models
-
-
-const anchor=document.querySelector("a")!
-// ! das heißt, wie sind sicher dass,a tag im unser document gibt
-console.log(anchor.href);
 
 
 const form=document.querySelector("form")!
-console.log(form.children);
 
-const aa=document.querySelector(".new-item-form") as HTMLElement
-console.log(aa);
 
 const type = document.querySelector("#type") as HTMLSelectElement
 const tofrom = document.querySelector("#tofrom") as HTMLInputElement
 const details = document.querySelector("#details") as HTMLInputElement
 const amount = document.querySelector("#amount") as HTMLInputElement
 
+
 form.addEventListener("submit",(e:Event)=>{
     e.preventDefault()
 
-    console.log(type.value);
-    console.log(tofrom.value);
-    console.log(details.value);
-    console.log(amount.valueAsNumber);
+    let doc:Hasformatter
+    if(type.value === "bill"){
+        doc=new Invoice(tofrom.value,details.value,amount.valueAsNumber)
+    }else{
+        doc=new Payment(tofrom.value,details.value,amount.valueAsNumber)
+    }
+
+   console.log(doc);
+   
     
 })
-//############################################
-//Classes
-//public - private - readonly
 
-// class Invoice {
-//     // client: string;
-//     // details: string;
-//     // amount: number;
-    
-//     // constructor (c:string , d:string , a:number){
-//     //     this.client=c;
-//     //     this.details=d;
-//     //     this.amount=a;
-//     // }
 
-//     //das ist eine alternative für class create.wir können properties einfach im constractor definieren aber mussen with access type auch gleichzeitig definieren.
-//     constructor(
-//         public client:string,
-//         private details:string,
-//         readonly amount:number
-//     ){}
 
-//     format(){
-//         return `${this.client} owes ${this.amount} for ${this.details} `
-//     }
-
-   
-// }
-
-let invOne=new Invoice("ali","work to web site",290)
-let invTwo=new Invoice("sina","cover",300)
-
-console.log(invOne);
-console.log(invTwo);
-console.log(invOne.format());
-console.log(invTwo.format());
-
-let invoices: Invoice []=[]
-invoices.push(invOne)
-invoices.push(invTwo)
-
-console.log(invoices);
-
-invOne.client="sahar"
-// invOne.details="ssss" //das geht nicht da, details hast acess type auf privat
-// invOne.amount=444     //das geht nicht da, amount hast acess type auf readonly
-
-//####################################################
-//Modules
-//Ein Modulsystem in TypeScript hilft uns, unseren Code besser zu organisieren, so wie man Dinge in verschiedene Schubladen legt.
-// Für Modules zu verwenden, sollen wir :
-//1: in tsconfig =>  "module": "es2015", 
-//                   "target": "es6",  
-//2: im HTML datei sollen wir type="module" hinzufügen
-//   <script type="module" src='./sandbox.js'></script>
-
-//#####################################################
-//Interfaces
-// Klassen (Classes) sind für Struktur und Verhalten. Sie können Eigenschaften und Methoden haben und können Instanzen erstellen.
-// Schnittstellen (Interfaces) sind nur für Struktur. Sie definieren, wie Daten aussehen sollten, aber haben keine Implementierung von Methoden oder Eigenschaften.
-
-interface isPerson{
-    name:string;
-    age:number;
-    speak(a:string):void;
-    spend(a:number) : number
-}
-
-let me : isPerson ={
-    name:"ali",
-    age:22,
-    speak(text:string){
-        console.log(text);
-        
-    },
-    spend(amount:number){
-        console.log("I spend",amount);
-        return amount
-        
-    }
-}
-
-console.log(me);
-
-const greeting=(person:isPerson)=>{
-    console.log("hallo",person.name);
-    
-}
-
-greeting(me)
-
-//#######################################################
-//Classes with Interfaces
-
-let docOne:Hasformatter
-let docTwo:Hasformatter
-
-docOne=new Invoice("ali","work to web site",290)
-docTwo=new Payment("sina","cover",300)
-
-let docs:Hasformatter[]=[]
-docs.push(docOne)
-docs.push(docTwo)
-console.log(docs);
 
 
 
