@@ -165,5 +165,32 @@ const docEins:Resource <object> ={
 
 console.log(docEins.data);
 
+//############################################################
+//Enum
+
+interface Resource2 <T> {
+    uid:number;
+    resourcerType:number;
+    data:T
+}
+
+enum ResourcerType {PERSON,BOOK,VIDEO}
+
+const docZwei:Resource2 <object> ={
+    uid:1,
+    // resourcerType:1,
+    resourcerType:ResourcerType.PERSON,
+    data:{name:"ali"}
+}
+
+const docDrei:Resource2 <object> ={
+    uid:2,
+    //resourcerType:2,
+    resourcerType:ResourcerType.BOOK,
+    data:{teile:"welt"}
+}
+
+console.log(docZwei,docDrei);
+
 
 
