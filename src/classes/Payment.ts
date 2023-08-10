@@ -9,7 +9,7 @@ export class Payment implements Hasformatter {
     ){}
 
     format(){
-        return `${this.seller} owes ${this.amount} for ${this.details} `
+        return `${this.seller} creditor  ${this.amount} for ${this.details} `
     }
 
    
