@@ -79,3 +79,20 @@ let docs = [];
 docs.push(docOne);
 docs.push(docTwo);
 console.log(docs);
+//################################################
+//Gerenics
+// const UID=(obj:object)=>{
+const UID = (obj) => {
+    // این خط یعنی همه چیز را دریافت کن ولی فقط از نوع آبجکت باشد ولی هر آبجکتی که میخواهد باشد
+    let randomNum = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { randomNum });
+};
+const docThree = UID({ name: "elham", age: 45 });
+console.log(docThree);
+console.log(docThree.name);
+const docEins = {
+    uid: 22,
+    resourcerName: "sara",
+    data: { name: "ddddd" }
+};
+console.log(docEins.data);

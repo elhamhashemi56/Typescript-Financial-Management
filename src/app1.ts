@@ -135,5 +135,35 @@ docs.push(docOne)
 docs.push(docTwo)
 console.log(docs);
 
+//################################################
+//Gerenics
+
+// const UID=(obj:object)=>{
+const UID=<T extends object>(obj:T)=>{
+// این خط یعنی همه چیز را دریافت کن ولی فقط از نوع آبجکت باشد ولی هر آبجکتی که میخواهد باشد
+    let randomNum=Math.floor(Math.random()*100)
+    return {...obj,randomNum}
+}
+
+const docThree=UID({name:"elham",age:45})
+console.log(docThree);
+console.log(docThree.name);
+
+// another example for interface with generic
+
+interface Resource <T> {
+    uid:number;
+    resourcerName:string;
+    data:T
+}
+
+const docEins:Resource <object> ={
+    uid:22,
+    resourcerName:"sara",
+    data:{name:"ddddd"}
+}
+
+console.log(docEins.data);
+
 
 
