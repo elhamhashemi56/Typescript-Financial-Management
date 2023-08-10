@@ -192,5 +192,14 @@ const docDrei:Resource2 <object> ={
 
 console.log(docZwei,docDrei);
 
+//##################################################
+//Tuples
+// bei Tuples sollen wir für jede index im array ein type definieren.
+let arr=["elham",22,true]
 
+arr[0]=44
+arr=[33,"sara"]
 
+let arrTup :[string,number,boolean]=["ali",33,false]
+
+console.log(arrTup);

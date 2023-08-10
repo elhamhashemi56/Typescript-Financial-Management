@@ -15,11 +15,17 @@ const list=new ListTamplate(ul)
 form.addEventListener("submit",(e:Event)=>{
     e.preventDefault()
 
+    let valuesTuples:[string,string,number]
+    valuesTuples=[tofrom.value,details.value,amount.valueAsNumber]
+
     let doc:Hasformatter
     if(type.value === "bill"){
-        doc=new Invoice(tofrom.value,details.value,amount.valueAsNumber)
+        // doc=new Invoice(tofrom.value,details.value,amount.valueAsNumber)
+        //Alternative mit Tuples
+        doc=new Invoice(...valuesTuples)
     }else{
-        doc=new Payment(tofrom.value,details.value,amount.valueAsNumber)
+        //doc=new Payment(tofrom.value,details.value,amount.valueAsNumber)
+        doc=new Payment(...valuesTuples)
     }
 
 
